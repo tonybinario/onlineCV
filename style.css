@@ -490,7 +490,8 @@ img {
 }
 
 iframe {
-  width: 90%;
+  height: 500px;
+  width: 89.5%;
 }
 
 /* ===================================
@@ -540,6 +541,9 @@ button:hover {
   p {
     max-width: 97%;
     font-size: 0.7em;
+  }
+  iframe {
+    width: 95%;
   }
 }
 /*Slide Show*/
