@@ -1,0 +1,123 @@
+/* ===================================
+   BASE STYLES – Globale HTML-Elemente
+   =================================== */
+
+body {
+  background-color: RGB(22, 28, 37);
+  min-width: 30em;
+}
+
+/* ----- Links ----- */
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ----- Überschriften ----- */
+h1 {
+  color: white;
+  text-align: center;
+  margin: 2% 2% 8% 2%;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  word-spacing: 0.3rem;
+}
+
+h3 {
+  color: black;
+  font-size: 1.5rem;
+}
+
+h4 {
+  color: black;
+  font-size: 1.2rem;
+}
+
+/* ----- Absätze & Listen ----- */
+p {
+  text-align: justify;
+  line-height: 1.8; /* Erhöht den Abstand zwischen den Zeilen */
+  font-size: 0.9rem;
+  max-width: 89.5%;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  font-size: 0.9rem; /* Foundation überschreiben */
+}
+
+li {
+  line-height: 1.6; /* Erhöht den Abstand zwischen den Zeilen */
+  font-weight: bold;
+  background-color: RGB(115, 200, 248);
+}
+
+/* ----- Medien (Bilder & Videos) ----- */
+img {
+  max-width: 45%;
+}
+
+video {
+  width: 90%;
+}
+
+/* ===================================
+   FORMULAR-STYLES
+   =================================== */
+
+/* ----- Labels ----- */
+label {
+  font-weight: bold;
+}
+
+/* ----- Eingabefelder & Textarea ----- */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+textarea {
+  min-height: 150px; /* Damit das Textfeld nicht zu klein ist */
+  resize: none;
+}
+
+/* ----- Buttons ----- */
+button {
+  background-color: RGB(22, 28, 37); /* #007bff */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(0, 86, 179);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 600px) {
+  body {
+    margin-left: 16.5%; /* Unbedingt noch testen */
+  }
+
+  p {
+    max-width: 97%;
+    font-size: 0.7em;
+  }
+}

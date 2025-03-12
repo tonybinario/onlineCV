@@ -1,0 +1,336 @@
+@use "mixins";
+
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+
+.l-nav-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 30% 7% 30%; /* 7% Abstand nach unten */
+  padding: 1.5%;
+
+  li {
+    flex: 1 0 100%;
+    padding: 1%;
+    margin: 2%;
+    text-align: center;
+    list-style: none;
+    transition: transform 0.3s ease-in-out; /* Glatter Übergang bei Skalierung */
+  }
+
+  a {
+    display: block; /* Die ganze Fläche zählt als Link */
+  }
+}
+
+nav ul li:hover {
+  transform: scale(1.1); /* Skaliert den Listeneintrag leicht */
+}
+
+/* ===================================
+   ARTICLES
+   =================================== */
+
+/* ----- PERSONAL DATA & EDUCATION ----- */
+.l-article-columns {
+  @include mixins.container-layout($padding: 2.5em, $gap: 3em);
+}
+
+.l-article-columns > ul {
+  flex: 1 0 20%;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 30px;
+  }
+}
+
+.l-article-columns > ul:last-of-type {
+  margin-right: 5px;
+}
+
+.l-article-columns > ul > li::before {
+  content: "\f013"; /* Font Awesome Gear Icon */
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  animation: spin 2s linear infinite;
+}
+ /* Ul-spezialfall */
+#hidden-languages-symbol{
+  display:none
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+  }
+}
+
+/* ----- SKILL SET ----- */
+.l-article-boxes {
+  @include mixins.container-layout($gap: 6em);
+}
+
+.l-article-boxes > img {
+  flex: 1 0 auto;
+  max-width: 8%;
+  margin: auto;
+}
+
+/* ----- PROJECTS #1 ----- */
+.l-article-single-column-center {
+  @include mixins.container-layout(
+          $flex-direction: column,
+          $justify-content: center,
+          $align-items: center,
+          $padding: 2%,
+          $gap: 1em
+  );
+
+  h3 {
+    @include mixins.article-heading;
+  }
+
+  h4 {
+    align-self: flex-start;
+    margin-left: 5.1%;
+  }
+
+  video {
+    margin-bottom: 1.8%;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100%;
+    margin-top: 1.5%;
+  }
+
+  a {
+    flex: 1 0 auto;
+    margin-left: 2%;
+  }
+}
+
+/* ----- PROJECTS #2 ----- */
+.l-article-single-column-2 {
+  @include mixins.container-layout(
+          $flex-direction: column,
+          $justify-content: center,
+          $align-items: center,
+          $padding: 2%,
+          $gap: 1em
+  );
+
+  h3 {
+    @include mixins.article-heading;
+  }
+
+  h4 {
+    align-self: flex-start;
+    margin-left: 5.1%;
+  }
+
+  p {
+    margin-bottom: 1%;
+  }
+}
+
+.l-tools-container {
+  display: flex;
+  align-self: flex-start;
+  gap: 5em;
+  margin-left: 4%;
+
+  p {
+    min-width: 100%;
+
+  }
+}
+
+/* ===================================
+   FORMULAR
+   =================================== */
+.l-form-container {
+  @include mixins.container-layout($gap: 2em);
+
+  .form-label {
+    margin-bottom: 1%;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > p {
+      margin-top: 0.5%;
+      color: indigo;
+      font-size: 0.7em;
+    }
+  }
+}
+
+/* ===================================
+   BILDER
+   =================================== */
+#languages_spoken_pic {
+  position: absolute;
+  width: 145px;
+  height: 21px;
+  top: 1000px;
+  left: 348px;
+}
+
+#profile_pic {
+  flex: 1 0 20em;
+  border: solid 7px black;
+  max-width: 14.5%;
+  margin-top: 2%;
+  margin-left: 8%;
+  margin-right: 7%;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* ----- NAVIGATION ----- */
+@media screen and (max-width: 600px) {
+  .l-nav-ul {
+    margin: 7% auto 24% auto;
+    width: 80%; /* Breite begrenzen */
+    gap: 25px;
+
+    li {
+      height: 40px;
+      align-content: center;
+    }
+  }
+
+  /* ----- PERSONAL DATA ----- */
+  .l-article-columns {
+    @include mixins.container-layout($margin: 12% 3% 24% auto, $gap: 0em);
+  }
+
+  .l-article-columns > ul {
+    padding: 8%;
+    min-width: 20%;
+  }
+
+  .l-article-columns > ul:last-of-type {
+    margin-right: 0;
+  }
+
+  #profile_pic {
+    display: none;
+  }
+
+  #languages_spoken_pic {
+    display: none;
+  }
+
+  #languages_spoken_pic {
+    position: absolute;
+    width: 145px;
+    height: 21px;
+    top: 1040px;
+    left: 108px;
+  }
+
+  /* statt dem Sprachen-Symbolen */
+#hidden-languages-symbol{
+  display: flex;
+}
+
+
+  /* ----- SKILLSET ----- */
+  .l-article-boxes {
+    @include mixins.container-layout($margin: 12% 3% 24% auto, $padding: 7%, $gap: 2.5em);
+
+    img {
+      min-width: 13%;
+    }
+  }
+
+  /* ----- PROJECT #1 ----- */
+  .l-article-single-column-center {
+    @include mixins.container-layout(
+            $flex-direction: column,
+            $justify-content: center,
+            $align-items: center,
+            $margin: 12% 3% 24% auto,
+            $gap: 1em
+    );
+
+    h3 {
+      margin-left: 0.5%;
+    }
+
+    h4 {
+      margin-left: 1%;
+    }
+
+    video {
+      min-width: 100%;
+    }
+
+    a {
+      max-width: 90%;
+      margin-left: 15%;
+    }
+  }
+
+  /* ----- PROJECT #2 ----- */
+  .l-article-single-column-2 {
+    @include mixins.container-layout(
+            $flex-direction: column,
+            $justify-content: center,
+            $align-items: center,
+            $margin: 12% 3% 24% auto,
+            $gap: 1em
+    );
+
+    h3 {
+      margin-left: 0.5%;
+    }
+
+    h4 {
+      margin-left: 1%;
+    }
+
+    .slide-container {
+      min-width: 100%;
+    }
+  }
+
+  div {
+    margin-right: 0;
+  }
+
+  /* ----- FORMULAR ----- */
+  .l-form-container {
+    @include mixins.container-layout(
+            $flex-direction: column,
+            $justify-content: center,
+            $align-items: center,
+            $margin: 12% 3% 24% auto,
+            $gap: 1em
+    );
+  }
+}

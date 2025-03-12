@@ -1,0 +1,29 @@
+@mixin container-layout(
+  $position: relative,
+  $display: flex,
+  $flex-direction: row,
+  $flex-wrap: wrap,
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $bg-color: rgb(115, 200, 248),
+  $padding: 3%,
+  $margin: 5% 15% 10% 15%,
+  $gap: 8em
+) {
+  position: $position;
+  display: $display;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  background-color: $bg-color;
+  padding: $padding;
+  margin: $margin;
+  gap: $gap;
+}
+
+@mixin article-heading {
+  align-self: flex-start;
+  margin-left: 4.7%;
+  margin-bottom: 2%;
+}

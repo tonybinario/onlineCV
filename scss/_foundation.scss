@@ -1,0 +1,70 @@
+/*Unberührte importierte Foundation-Datei*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Leserlichkeit*/
+body {
+  margin-left: 5px;
+}
+
+/*Wissen mit welcher schriftgröße man arbeitet*/
+:root {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Leserlichkeit*/
+h1, h2, h3, h4, h5 {
+  font-size: 3rem;
+  margin: 0.5% 0 0.5% 0;
+  font-weight: bold;
+}
+
+nav {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; /* Unterstreiche Links beim Hover */
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 80ch;
+}
+
+img{
+  max-width: 50%;
+}
+
+ul, ol {
+  padding-inline-start: 3%;
+  line-height: 1.5;
+  color: black;
+  font-size: 1.2rem;
+}
+
+table {
+  margin-top: 1%;
+  font-size: 1.2rem;
+
+  th {
+    font-size: 1.5rem;
+    border-style: groove;
+
+  }
+
+  td {
+    border-style: groove;
+    padding: 8px;
+  }
+}

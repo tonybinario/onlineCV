@@ -1,0 +1,30 @@
+
+  /*Slide Show*/
+  .slide-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 3.5%;
+    width: 90%;
+  }
+
+  /* Styling für die Buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Positionierung */
+  .prev { left: 10px; }
+  .next { right: 10px; }
+

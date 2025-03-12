@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>online_lebenslauf</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<h1>ONLINE CV</h1>
+<h2>NAVIGATION</h2>
+<nav>
+    <ul class="l-nav-ul">
+        <li><a href="#personal_data">PERSONAL DATA & EDUCATION</a></li>
+        <li><a href="#skillset">SKILLSET</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#getintouch">GET IN TOUCH</a></li>
+    </ul>
+</nav>
+<main>
+    <h2 id="personal_data">PERSONAL DATA & EDUCATION </h2>
+    <article class="l-article-columns">
+        <img id="profile_pic" src="pics/images/profil.png" alt="profilbild">
+        <ul>
+            <li> BIRTHDAY: <br>
+                30.01.1997 <br><br></li>
+
+            <li>ADRESS: <br>
+                FEURIGSTR. 13 <br>
+                10827 BERLIN <br><br></li>
+
+            <li>PHONE NUMBER: <br>
+                0176 - 50523135 <br><br></li>
+
+            <li>E-MAIL: <br>
+                a_keetman@proton.me<br><br></li>
+            <li id="hidden-languages-symbol">LANGUAGES: <br>
+                DEUTSCH<br>
+                SPANISCH<br>
+                ENGLISH
+            </li>
+        </ul>
+        <ul>
+            <li> HIGH SCHOOL DIPLOMA:<br> SOPHIE-SCHOLL-OBERSCHULE, BERLIN (2016) <br><br></li>
+            <li>1 SEMESTER OF COMPUTER SCIENCE:<br> FU BERLIN (WS 2018) <br><br></li>
+            <li>SINCE SS 20: <br> STUDYING MEDIA INFORMATICS:<br>BERLINER HOCHSCHULE DER TECHNIK</li>
+        </ul>
+    </article>
+    <img id="languages_spoken_pic" src="pics/images/languages.png" alt="gesprochene_sprachen"></img>
+    <h2 id="skillset">SKILLSET</h2>
+    <article class="l-article-boxes">
+        <img src="pics/icons/java.png" alt="Java-Logo">
+        <img src="pics/icons/javascript-original.svg" alt="JavaScript-Logo">
+        <img src="pics/icons/typescript-original.svg" alt="TypeScript-Logo">
+        <img src="pics/icons/css3-original.svg" alt="CSS3-Logo">
+        <img src="pics/icons/tailwind.png" alt="Tailwind CSS-Logo">
+        <img src="pics/icons/postgresql-original.svg" alt="PostgreSQL-Logo">
+        <img src="pics/icons/mongodb-original.svg" alt="MongoDB-Logo">
+        <img src="pics/icons/figma-original.svg" alt="Figma-Logo">
+        <img src="pics/icons/nodejs-original.svg" alt="Node.js-Logo">
+        <img src="pics/icons/git-original.svg" alt="Git-Logo">
+        <img src="pics/icons/docker.png" alt="Docker-Logo">
+    </article>
+    <h2 id="projects">PROJECTS</h2>
+    <article class="l-article-single-column-center">
+        <h3>#1 NATIVE FINGERS</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tmjLfOWINf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h4>DESCRIPTION</h4>
+        <p>
+            THIS WEB APPLICATION IS AN INTERACTIVE PLATFORM DESIGNED TO HELP USERS IMPROVE THEIR TYPING SKILLS. USERS
+            CAN TYPE WORDS AND SENTENCES IN VARIOUS LANGUAGES WHILE MEASURING THEIR ACCURACY AND SPEED. IT FEATURES
+            MULTIPLE MODES, INCLUDING A TIMED COMPETITION WHERE USERS CAN CHALLENGE EACH OTHER AND APPEAR ON A
+            LEADERBOARD. AN ADDITIONAL FEATURE IS THE TRANSLATION OF THE TYPED WORDS, WHICH SUPPORTS LANGUAGE LEARNING.
+            THE PROJECT ENCOURAGES BOTH IMPROVING TYPING ABILITIES AND LEARNING NEW LANGUAGES IN A FUN AND COMPETITIVE
+            ENVIRONMENT. FOR MORE INFORMATION VISIT OUR WEBSITE!
+        </p>
+        <div>
+            <h4>LINK:</h4>
+            <a href="https://morning-brook-98709-f2682112d8f4.herokuapp.com" target="_blank" rel="noopener">
+                https://morning-brook-98709-f2682112d8f4.herokuapp.com
+            </a>
+        </div>
+    </article>
+    <article class="l-article-single-column-2">
+        <h3>#2 MOBILE APPLICATION </h3>
+        <h4>DESCRIPTION</h4>
+        <p>EASILY CONVERT UNITS WITH THIS UNIT CONVERTER APP! WHETHER YOU NEED TO CONVERT SPEED, TEMPERATURE, VOLUME,
+            AREA, OR OTHER UNITS, THIS APP MAKES IT QUICK AND EFFORTLESS. CONVERT BETWEEN FAHRENHEIT AND CELSIUS,
+            KILOMETERS PER HOUR AND METERS PER SECOND, CUBIC METERS AND SQUARE METERS, AND MORE.</p>
+        <div class="slide-container">
+            <img class="mySlides" src="pics/images/image%201.png" alt="Screenshot der mobilen Anwendung 1">
+            <img class="mySlides" src="pics/images/image%202.png" alt="Screenshot der mobilen Anwendung 2">
+            <img class="mySlides" src="pics/images/image%203.png" alt="Screenshot der mobilen Anwendung 3">
+            <img class="mySlides" src="pics/images/image%204.png" alt="Screenshot der mobilen Anwendung 4">
+            <img class="mySlides" src="pics/images/image%205.png" alt="Screenshot der mobilen Anwendung 5">
+            <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="next" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        <div class="l-tools-container">
+            <h4>TOOLS:</h4>
+            <p>ANDROID STUDIO & JAVA</p>
+        </div>
+    </article>
+    <h2 id="getintouch">GET IN TOUCH</h2>
+    <form
+            action="https://formspree.io/f/xoveaqzd"
+            class="l-form-container"
+            target="_top"
+            method="POST">
+        <div class="form-field">
+            <label class="form-label" for="name">YOUR NAME</label>
+            <input id="name" name="name" required/>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="email">YOUR E-MAIL</label>
+            <input id="email" name="email" required/>
+            <p>
+                THIS WILL HELP ME RESPOND TO YOUR MESSAGE :)
+            </p>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="message">MESSAGE</label>
+            <textarea
+                    id="message"
+                    name="message"
+                    required
+            ></textarea>
+        </div>
+        <button type="submit">SEND</button>
+    </form>
+</main>
+<script src="js/slideshow.js"></script>
+
+</body>
+</html>
