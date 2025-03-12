@@ -38,7 +38,7 @@ nav ul li:hover {
 
 /* ----- PERSONAL DATA & EDUCATION ----- */
 .l-article-columns {
-  @include mixins.container-layout($padding: 2.5em, $gap: 3em);
+  @include mixins.container-layout($padding: 2.8em, $gap: 3em);
 }
 
 .l-article-columns > ul {
@@ -52,7 +52,7 @@ nav ul li:hover {
 }
 
 .l-article-columns > ul:last-of-type {
-  margin-right: 5px;
+  margin-right: 10%;
 }
 
 .l-article-columns > ul > li::before {
@@ -193,14 +193,14 @@ nav ul li:hover {
   position: absolute;
   width: 145px;
   height: 21px;
-  top: 1000px;
-  left: 348px;
+  top: 1150px;
+  left: 436px;
 }
 
 #profile_pic {
   flex: 1 0 20em;
   border: solid 7px black;
-  max-width: 14.5%;
+  max-width: 12.5%;
   margin-top: 2%;
   margin-left: 8%;
   margin-right: 7%;
@@ -214,7 +214,7 @@ nav ul li:hover {
 @media screen and (max-width: 600px) {
   .l-nav-ul {
     margin: 7% auto 24% auto;
-    width: 80%; /* Breite begrenzen */
+    width: 90%; /* Breite begrenzen */
     gap: 25px;
 
     li {
@@ -225,7 +225,7 @@ nav ul li:hover {
 
   /* ----- PERSONAL DATA ----- */
   .l-article-columns {
-    @include mixins.container-layout($margin: 12% 3% 24% auto, $gap: 0em);
+    @include mixins.container-layout($margin: 12% 0 24% 0, $padding: 1%,$gap: 0em);
   }
 
   .l-article-columns > ul {
