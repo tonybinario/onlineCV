@@ -208,6 +208,7 @@ nav ul li:hover {
 .l-article-single-column-2 h4 {
   align-self: flex-start;
   margin-left: 5.1%;
+  margin-top: 0;
 }
 .l-article-single-column-2 p {
   margin-bottom: 1%;
@@ -279,7 +280,7 @@ nav ul li:hover {
 /* ----- NAVIGATION ----- */
 @media screen and (max-width: 600px) {
   .l-nav-ul {
-    margin: 7% auto 24% auto;
+    margin: 7% 6% 24% auto;
     width: 90%; /* Breite begrenzen */
     gap: 25px;
   }
@@ -297,7 +298,7 @@ nav ul li:hover {
     align-items: flex-start;
     background-color: rgb(115, 200, 248);
     padding: 1%;
-    margin: 12% 0 24% 0;
+    margin: 12% 4% 24% 0;
     gap: 0em;
   }
   .l-article-columns > ul {
@@ -533,7 +534,7 @@ button:hover {
    =================================== */
 @media screen and (max-width: 600px) {
   body {
-    margin-left: 10.5%; /* Unbedingt noch testen */
+    margin-left: 5.5%; /* Unbedingt noch testen */
     min-width: 32em;
   }
   p {
@@ -554,27 +555,6 @@ button:hover {
   background: rgba(0, 0, 0, 0.9);
   padding: 3.5%;
   width: 90%;
-  cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
-}
-
-/* Vollbildmodus - wenn das Bild angeklickt wird */
-.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.fullscreen img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
 }
 
 /* Styling für die Buttons */
@@ -598,6 +578,78 @@ button:hover {
 
 .next {
   right: 10px;
+}
+
+/* Vollbildmodus für die Slideshow */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95); /* Dunkler Hintergrund */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 0;
+}
+
+/* Bilder im Vollbildmodus */
+.fullscreen img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain; /* Verhindert Verzerrung */
+}
+
+.fullscreen-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.fullscreen-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+/* Schließen-Button für den Vollbildmodus */
+.close-fullscreen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.close-fullscreen:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Vor/Zurück-Buttons anpassen, damit sie auch im Vollbild funktionieren */
+.fullscreen .prev, .fullscreen .next {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 15px;
+}
+
+.fullscreen .prev:hover, .fullscreen .next:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* Drehende Räder der Liste */

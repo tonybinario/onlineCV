@@ -1,7 +1,5 @@
 let slideIndex = 1;
 showDivs(slideIndex);
-// Alle Bilder auswählen
-const images = document.querySelectorAll('.mySlides');
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -18,9 +16,58 @@ function showDivs(n) {
     x[slideIndex-1].style.display = "block";
 }
 
+//-------------------------------------------------------------------------------------------------------------------
+// Alle Bilder auswählen
+const images = document.querySelectorAll('.mySlides');
+
+
 // Event-Listener hinzufügen, um den Vollbildmodus zu aktivieren
 images.forEach(image => {
     image.addEventListener('click', function() {
         this.classList.toggle('fullscreen');
     });
+});
+
+//----------------------------------------------------------------------------------------------------------------
+
+
+const slideContainer = document.querySelector('.slide-container');
+let isFullscreen = false;
+const fullscreenBtn = document.querySelector('.fullscreen-btn');
+
+// Funktion für den Vollbildmodus
+function openFullscreen() {
+    if (!isFullscreen) {
+        slideContainer.classList.add('fullscreen');
+
+        fullscreenBtn.style.display = "none";
+
+
+        // Schließen-Button erstellen
+        const closeButton = document.createElement('button');
+        closeButton.innerHTML = "&#10005;"; // "X" Symbol
+        closeButton.classList.add('close-fullscreen');
+        closeButton.onclick = closeFullscreen;
+
+        slideContainer.appendChild(closeButton);
+        isFullscreen = true;
+    }
+}
+
+// Funktion zum Schließen des Vollbildmodus
+function closeFullscreen() {
+    slideContainer.classList.remove('fullscreen');
+    const closeButton = document.querySelector('.close-fullscreen');
+    if (closeButton) {
+        closeButton.remove();
+    }
+    isFullscreen = false;
+    fullscreenBtn.style.display = "block";
+
+
+}
+
+// Klick-Event für Vollbildmodus aktivieren (wenn ein Bild geklickt wird)
+images.forEach(image => {
+    image.addEventListener('click', openFullscreen);
 });
