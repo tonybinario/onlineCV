@@ -125,30 +125,11 @@ nav ul li:hover {
   margin-right: 10%;
 }
 
-.l-article-columns > ul > li::before {
-  content: "\f013"; /* Font Awesome Gear Icon */
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(0deg);
-  animation: spin 2s linear infinite;
-}
-
 /* Ul-spezialfall */
-#hidden-languages-symbol {
+#hidden-languages-info {
   display: none;
 }
 
-@keyframes spin {
-  0% {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
-  }
-}
 /* ----- SKILL SET ----- */
 .l-article-boxes {
   position: relative;
@@ -277,10 +258,10 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 140px;
+  width: 135px;
   height: 21px;
-  top: 1010px;
-  left: 351px;
+  top: 285px;
+  left: 123px;
 }
 
 #profile_pic {
@@ -340,8 +321,8 @@ nav ul li:hover {
     left: 108px;
   }
   /* statt dem Sprachen-Symbolen */
-  #hidden-languages-symbol {
-    display: flex;
+  #hidden-languages-info {
+    display: block;
   }
   /* ----- SKILLSET ----- */
   .l-article-boxes {
@@ -378,12 +359,8 @@ nav ul li:hover {
   .l-article-single-column-center h4 {
     margin-left: 1%;
   }
-  .l-article-single-column-center video {
-    min-width: 100%;
-  }
   .l-article-single-column-center a {
     max-width: 90%;
-    margin-left: 15%;
   }
   /* ----- PROJECT #2 ----- */
   .l-article-single-column-2 {
@@ -565,7 +542,7 @@ button:hover {
   }
   iframe {
     width: 100%;
-    height: 250px;
+    height: 320px;
   }
 }
 /*Slide Show*/
@@ -577,6 +554,27 @@ button:hover {
   background: rgba(0, 0, 0, 0.9);
   padding: 3.5%;
   width: 90%;
+  cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
+}
+
+/* Vollbildmodus - wenn das Bild angeklickt wird */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
 /* Styling für die Buttons */
@@ -600,6 +598,27 @@ button:hover {
 
 .next {
   right: 10px;
+}
+
+/* Drehende Räder der Liste */
+.l-article-columns > ul > li::before {
+  content: "\f013"; /* Font Awesome Gear Icon */
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

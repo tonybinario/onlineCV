@@ -11,3 +11,4 @@ variablen hinzufügen
 
     animtation bei den nav punkten zu den punkten wöre coolheroku --version
 
+größen von pixel in wh ?

@@ -1,5 +1,7 @@
 let slideIndex = 1;
 showDivs(slideIndex);
+// Alle Bilder auswählen
+const images = document.querySelectorAll('.mySlides');
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -15,3 +17,10 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
+
+// Event-Listener hinzufügen, um den Vollbildmodus zu aktivieren
+images.forEach(image => {
+    image.addEventListener('click', function() {
+        this.classList.toggle('fullscreen');
+    });
+});

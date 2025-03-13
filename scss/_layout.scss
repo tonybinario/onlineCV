@@ -55,29 +55,9 @@ nav ul li:hover {
   margin-right: 10%;
 }
 
-.l-article-columns > ul > li::before {
-  content: "\f013"; /* Font Awesome Gear Icon */
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(0deg);
-  animation: spin 2s linear infinite;
-}
-
 /* Ul-spezialfall */
-#hidden-languages-symbol {
+#hidden-languages-info {
   display: none
-}
-
-@keyframes spin {
-  0% {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
-  }
 }
 
 /* ----- SKILL SET ----- */
@@ -192,10 +172,10 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 140px;
+  width: 135px;
   height: 21px;
-  top: 1010px;
-  left: 351px;
+  top: 285px;
+  left: 123px;
 }
 
 #profile_pic {
@@ -255,8 +235,9 @@ nav ul li:hover {
   }
 
   /* statt dem Sprachen-Symbolen */
-  #hidden-languages-symbol {
-    display: flex;
+  #hidden-languages-info {
+    display: block;
+
   }
 
 
@@ -287,13 +268,8 @@ nav ul li:hover {
       margin-left: 1%;
     }
 
-    video {
-      min-width: 100%;
-    }
-
     a {
       max-width: 90%;
-      margin-left: 15%;
     }
   }
 

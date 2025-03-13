@@ -8,6 +8,26 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 3.5%;
     width: 90%;
+    cursor: pointer; /* Zeigt an, dass das Bild klickbar ist */
+  }
+  /* Vollbildmodus - wenn das Bild angeklickt wird */
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
   }
 
   /* Styling für die Buttons */
@@ -28,3 +48,24 @@
   .prev { left: 10px; }
   .next { right: 10px; }
 
+  /* Drehende Räder der Liste */
+  .l-article-columns > ul > li::before {
+    content: "\f013"; /* Font Awesome Gear Icon */
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    animation: spin 2s linear infinite;
+
+  }
+
+    @keyframes spin {
+      0% {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+      }
+    }
