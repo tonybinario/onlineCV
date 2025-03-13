@@ -2,18 +2,37 @@
    BASE STYLES – Globale HTML-Elemente
    =================================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: RGB(22, 28, 37);
   min-width: 30em;
 }
 
-/* ----- Links ----- */
-a {
+a:hover {
+  text-decoration: none;
+}
+
+#blue-link{
+    color: #021b9f;
+}
+
+#blue-p{
+  color: #021b9f;
+  font-size: 1em;
+  :hover{
+    text-decoration:underline;
+  }
+}
+
+a{
   color: black;
 }
 
-a:hover {
-  text-decoration: none;
+span{
+  color: #021b9f;
 }
 
 /* ----- Überschriften ----- */

@@ -236,7 +236,8 @@ nav ul li:hover {
   display: flex;
   align-self: flex-start;
   gap: 5em;
-  margin-left: 4%;
+  margin-left: 3.5%;
+  margin-top: 1%;
 }
 .l-tools-container p {
   min-width: 100%;
@@ -276,17 +277,17 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 145px;
+  width: 140px;
   height: 21px;
-  top: 1150px;
-  left: 436px;
+  top: 1010px;
+  left: 351px;
 }
 
 #profile_pic {
   flex: 1 0 20em;
   border: solid 7px black;
-  max-width: 12.5%;
-  margin-top: 2%;
+  max-width: 14%;
+  margin-top: 4%;
   margin-left: 8%;
   margin-right: 7%;
 }
@@ -426,18 +427,37 @@ nav ul li:hover {
 /* ===================================
    BASE STYLES – Globale HTML-Elemente
    =================================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: RGB(22, 28, 37);
   min-width: 30em;
 }
 
-/* ----- Links ----- */
+a:hover {
+  text-decoration: none;
+}
+
+#blue-link {
+  color: #021b9f;
+}
+
+#blue-p {
+  color: #021b9f;
+  font-size: 1em;
+}
+#blue-p :hover {
+  text-decoration: underline;
+}
+
 a {
   color: black;
 }
 
-a:hover {
-  text-decoration: none;
+span {
+  color: #021b9f;
 }
 
 /* ----- Überschriften ----- */

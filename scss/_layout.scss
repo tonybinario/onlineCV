@@ -65,9 +65,10 @@ nav ul li:hover {
   transform: translateY(-50%) rotate(0deg);
   animation: spin 2s linear infinite;
 }
- /* Ul-spezialfall */
-#hidden-languages-symbol{
-  display:none
+
+/* Ul-spezialfall */
+#hidden-languages-symbol {
+  display: none
 }
 
 @keyframes spin {
@@ -155,11 +156,11 @@ nav ul li:hover {
   display: flex;
   align-self: flex-start;
   gap: 5em;
-  margin-left: 4%;
+  margin-left: 3.5%;
+  margin-top: 1%;
 
   p {
     min-width: 100%;
-
   }
 }
 
@@ -191,17 +192,17 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 145px;
+  width: 140px;
   height: 21px;
-  top: 1150px;
-  left: 436px;
+  top: 1010px;
+  left: 351px;
 }
 
 #profile_pic {
   flex: 1 0 20em;
   border: solid 7px black;
-  max-width: 12.5%;
-  margin-top: 2%;
+  max-width: 14%;
+  margin-top: 4%;
   margin-left: 8%;
   margin-right: 7%;
 }
@@ -225,7 +226,7 @@ nav ul li:hover {
 
   /* ----- PERSONAL DATA ----- */
   .l-article-columns {
-    @include mixins.container-layout($margin: 12% 0 24% 0, $padding: 1%,$gap: 0em);
+    @include mixins.container-layout($margin: 12% 0 24% 0, $padding: 1%, $gap: 0em);
   }
 
   .l-article-columns > ul {
@@ -254,9 +255,9 @@ nav ul li:hover {
   }
 
   /* statt dem Sprachen-Symbolen */
-#hidden-languages-symbol{
-  display: flex;
-}
+  #hidden-languages-symbol {
+    display: flex;
+  }
 
 
   /* ----- SKILLSET ----- */
