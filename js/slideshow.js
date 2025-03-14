@@ -8,28 +8,17 @@ function plusDivs(n) {
 function showDivs(n) {
     let i;
     let x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    x[slideIndex-1].style.display = "block";
+    x[slideIndex - 1].style.display = "block";
 }
 
 //-------------------------------------------------------------------------------------------------------------------
 // Alle Bilder auswählen
 const images = document.querySelectorAll('.mySlides');
-
-
-// Event-Listener hinzufügen, um den Vollbildmodus zu aktivieren
-images.forEach(image => {
-    image.addEventListener('click', function() {
-        this.classList.toggle('fullscreen');
-    });
-});
-
-//----------------------------------------------------------------------------------------------------------------
-
 
 const slideContainer = document.querySelector('.slide-container');
 let isFullscreen = false;
@@ -39,9 +28,7 @@ const fullscreenBtn = document.querySelector('.fullscreen-btn');
 function openFullscreen() {
     if (!isFullscreen) {
         slideContainer.classList.add('fullscreen');
-
         fullscreenBtn.style.display = "none";
-
 
         // Schließen-Button erstellen
         const closeButton = document.createElement('button');
@@ -63,11 +50,12 @@ function closeFullscreen() {
     }
     isFullscreen = false;
     fullscreenBtn.style.display = "block";
-
-
 }
 
-// Klick-Event für Vollbildmodus aktivieren (wenn ein Bild geklickt wird)
-images.forEach(image => {
-    image.addEventListener('click', openFullscreen);
-});
+// Klick-Event für den Vollbildmodus aktivieren (Vollbild-Symbol)
+fullscreenBtn.addEventListener('click', openFullscreen);
+
+// Wenn du den Vollbildmodus manuell für das Bild anpassen möchtest, entferne die vorherige Codezeile und setze keine EventListener auf die Bilder selbst
+// images.forEach(image => {
+//     image.addEventListener('click', openFullscreen);
+// });
