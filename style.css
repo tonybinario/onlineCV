@@ -398,6 +398,9 @@ nav ul li:hover {
     margin: 12% 3% 24% auto;
     gap: 1em;
   }
+  .l-form-container > p {
+    font-size: 0.2em;
+  }
 }
 /* ===================================
    BASE STYLES – Globale HTML-Elemente

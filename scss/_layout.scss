@@ -173,10 +173,10 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 8.5rem;  /* 135px / 16px = 8.4375rem */
+  width: 8.5rem; /* 135px / 16px = 8.4375rem */
   height: 1.3rem; /* 21px / 16px = 1.3125rem */
-  top: 17.8rem;   /* 285px / 16px = 17.8125rem */
-  left: 7.7rem;   /* 123px / 16px = 7.6875rem */
+  top: 17.8rem; /* 285px / 16px = 17.8125rem */
+  left: 7.7rem; /* 123px / 16px = 7.6875rem */
 }
 
 #profile_pic {
@@ -219,7 +219,7 @@ nav ul li:hover {
     margin-right: 0;
   }
 
-  #profile_pic,  #languages_spoken_pic {
+  #profile_pic, #languages_spoken_pic {
     display: none;
   }
 
@@ -305,5 +305,9 @@ nav ul li:hover {
             $margin: 12% 3% 24% auto,
             $gap: 1em
     );
+
+    > p {
+      font-size: 0.2em;
+    }
   }
 }
