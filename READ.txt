@@ -1,14 +1,7 @@
 Konzept überdenken:
-Was ist em und rem
-alt atribute einfügen/
-<a> on hover/
-wie spielen flex start align content usw eine Rolle./
-Tools hinzufügen bei den projekten?/
-variablen hinzufügen
+em rem schrift vw vh viewport
+-variablen hinzufügen
 
- body {
-    margin-left: 10%;     //Unbedingt noch testen
 
-    animtation bei den nav punkten zu den punkten wöre coolheroku --version
-
-größen von pixel in wh ?
+verstehe ich alles was ich geschrieben habe?
+zettel vorbereiten in dem ich auf alle bewertungspunkte eingehe

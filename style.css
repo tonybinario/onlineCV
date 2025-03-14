@@ -122,7 +122,7 @@ nav ul li:hover {
 }
 
 .l-article-columns > ul:last-of-type {
-  margin-right: 10%;
+  margin-right: 8%;
 }
 
 /* Ul-spezialfall */
@@ -259,10 +259,10 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 135px;
-  height: 21px;
-  top: 285px;
-  left: 123px;
+  width: 8.5rem; /* 135px / 16px = 8.4375rem */
+  height: 1.3rem; /* 21px / 16px = 1.3125rem */
+  top: 17.8rem; /* 285px / 16px = 17.8125rem */
+  left: 7.7rem; /* 123px / 16px = 7.6875rem */
 }
 
 #profile_pic {
@@ -308,10 +308,7 @@ nav ul li:hover {
   .l-article-columns > ul:last-of-type {
     margin-right: 0;
   }
-  #profile_pic {
-    display: none;
-  }
-  #languages_spoken_pic {
+  #profile_pic, #languages_spoken_pic {
     display: none;
   }
   #languages_spoken_pic {
@@ -410,10 +407,13 @@ html {
 }
 
 body {
-  background-color: RGB(22, 28, 37);
-  min-width: 30em;
+  background-color: rgb(22, 28, 37);
+  min-width: 25vw;
 }
 
+a {
+  color: black;
+}
 a:hover {
   text-decoration: none;
 }
@@ -421,17 +421,13 @@ a:hover {
 #blue-link {
   color: #021b9f;
 }
+#blue-link:hover {
+  text-decoration: underline;
+}
 
 #blue-p {
   color: #021b9f;
   font-size: 1em;
-}
-#blue-p :hover {
-  text-decoration: underline;
-}
-
-a {
-  color: black;
 }
 
 span {
@@ -479,7 +475,7 @@ ol {
 li {
   line-height: 1.6; /* Erhöht den Abstand zwischen den Zeilen */
   font-weight: bold;
-  background-color: RGB(115, 200, 248);
+  background-color: rgb(115, 200, 248);
 }
 
 /* ----- Medien (Bilder & Videos) ----- */
@@ -488,7 +484,7 @@ img {
 }
 
 iframe {
-  height: 500px;
+  height: 46.3vh;
   width: 89.5%;
 }
 
@@ -514,19 +510,24 @@ textarea {
   resize: none;
 }
 
+input:focus, textarea:focus {
+  outline: none; /* Entfernt den Standard-Umriss */
+  border: 2px solid #0122ca; /* Blaue Umrandung bei Fokus */
+  background-color: #f8f8f8; /* Leicht grauer Hintergrund */
+}
+
 /* ----- Buttons ----- */
 button {
-  background-color: RGB(22, 28, 37); /* #007bff */
+  background-color: rgb(22, 28, 37); /* Hintergrundfarbe des Body */
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 0.9rem 0.9rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
-
 button:hover {
-  background-color: rgb(0, 86, 179);
+  background-color: rgb(0, 86, 179); /* Hover-Farbe */
 }
 
 /* ===================================
@@ -543,10 +544,13 @@ button:hover {
   }
   iframe {
     width: 100%;
-    height: 320px;
+    height: 29.6vh;
   }
 }
-/*Slide Show*/
+/* ===================================
+   SLIDE SHOW
+   =================================== */
+/* Container für die Slideshow */
 .slide-container {
   position: relative;
   display: flex;
@@ -557,11 +561,13 @@ button:hover {
   width: 90%;
 }
 
+/* ===================================
+   BUTTON STYLING
+   =================================== */
 /* Styling für die Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
   color: white;
   border: none;
@@ -569,9 +575,10 @@ button:hover {
   padding: 10px 15px;
   cursor: pointer;
   transition: 0.3s;
+  transform: translateY(-50%);
 }
 
-/* Positionierung */
+/* Positionierung der Buttons */
 .prev {
   left: 10px;
 }
@@ -580,18 +587,21 @@ button:hover {
   right: 10px;
 }
 
+/* ===================================
+   FULLSCREEN MODUS
+   =================================== */
 /* Vollbildmodus für die Slideshow */
 .fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.95); /* Dunkler Hintergrund */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   z-index: 1000;
   padding: 0;
 }
@@ -603,6 +613,7 @@ button:hover {
   object-fit: contain; /* Verhindert Verzerrung */
 }
 
+/* Button für das Aktivieren des Vollbildmodus */
 .fullscreen-btn {
   position: absolute;
   bottom: 10px;
@@ -622,12 +633,12 @@ button:hover {
   color: black;
 }
 
-/* Schließen-Button für den Vollbildmodus */
+/* Button zum Schließen des Vollbildmodus */
 .close-fullscreen {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
+  color: white; /* Weiß für den Text */
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.5);
   border: none;
@@ -640,7 +651,10 @@ button:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Vor/Zurück-Buttons anpassen, damit sie auch im Vollbild funktionieren */
+/* ===================================
+   FULLSCREEN NAVIGATION BUTTONS
+   =================================== */
+/* Vor/Zurück-Buttons im Vollbildmodus */
 .fullscreen .prev, .fullscreen .next {
   font-size: 2rem;
   background: rgba(255, 255, 255, 0.2);
@@ -652,6 +666,9 @@ button:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* ===================================
+   ANIMATIONEN
+   =================================== */
 /* Drehende Räder der Liste */
 .l-article-columns > ul > li::before {
   content: "\f013"; /* Font Awesome Gear Icon */
