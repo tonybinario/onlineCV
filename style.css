@@ -404,11 +404,19 @@ nav ul li:hover {
 }
 /* ----- Smartphone Querformat ----- */
 @media (max-width: 1024px) and (orientation: landscape) {
-  body {
-    background-color: purple;
+  .l-article-columns, .l-article-single-column-center, .l-article-boxes, .l-article-single-column-2, .l-form-container {
+    margin: 5% 10% 10% 10%;
   }
   #profile_pic, #languages_spoken_pic {
     display: none;
+  }
+  .l-article-boxes {
+    gap: 4em;
+  }
+  .l-article-boxes > img {
+    flex: 1 0 auto;
+    max-width: 12%;
+    margin: auto;
   }
 }
 /* ===================================
