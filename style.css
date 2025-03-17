@@ -407,6 +407,9 @@ nav ul li:hover {
   body {
     background-color: purple;
   }
+  #profile_pic, #languages_spoken_pic {
+    display: none;
+  }
 }
 /* ===================================
    BASE STYLES – Globale HTML-Elemente
