@@ -310,3 +310,11 @@ nav ul li:hover {
     font-size: 0.5em;
   }
 }
+
+/* ----- Smartphone Querformat ----- */
+
+@media (max-width: 1024px) and (orientation: landscape){
+
+  background-color: purple;
+
+}
