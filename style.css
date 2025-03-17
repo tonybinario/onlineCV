@@ -99,7 +99,7 @@ nav ul li:hover {
    ARTICLES
    =================================== */
 /* ----- PERSONAL DATA & EDUCATION ----- */
-.l-article-columns {
+.l-article-personaldata {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -112,16 +112,16 @@ nav ul li:hover {
   gap: 3em;
 }
 
-.l-article-columns > ul {
+.l-article-personaldata > ul {
   flex: 1 0 20%;
   list-style: none;
 }
-.l-article-columns > ul li {
+.l-article-personaldata > ul li {
   position: relative;
   padding-left: 30px;
 }
 
-.l-article-columns > ul:last-of-type {
+.l-article-personaldata > ul:last-of-type {
   margin-right: 8%;
 }
 
@@ -150,8 +150,8 @@ nav ul li:hover {
   margin: auto;
 }
 
-/* ----- PROJECTS #1 ----- */
-.l-article-single-column-center {
+/* ----- PROJECTS #1 & #2 ----- */
+.l-article-project1, .l-article-project2 {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -163,54 +163,35 @@ nav ul li:hover {
   margin: 5% 15% 10% 15%;
   gap: 1em;
 }
-.l-article-single-column-center h3 {
+.l-article-project1 h3, .l-article-project2 h3 {
   align-self: flex-start;
   margin-left: 4.7%;
   margin-bottom: 2%;
 }
-.l-article-single-column-center h4 {
+.l-article-project1 h4, .l-article-project2 h4 {
   align-self: flex-start;
   margin-left: 5.1%;
+  margin-top: 0;
 }
-.l-article-single-column-center video {
+
+/*---- Nur #1 -----*/
+.l-article-project1 video {
   margin-bottom: 1.8%;
 }
-.l-article-single-column-center div {
+.l-article-project1 div {
   display: flex;
   align-items: center;
   gap: 10px;
   min-width: 100%;
   margin-top: 1.5%;
 }
-.l-article-single-column-center a {
+.l-article-project1 a {
   flex: 1 0 auto;
   margin-left: 2%;
 }
 
-/* ----- PROJECTS #2 ----- */
-.l-article-single-column-2 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(115, 200, 248);
-  padding: 2%;
-  margin: 5% 15% 10% 15%;
-  gap: 1em;
-}
-.l-article-single-column-2 h3 {
-  align-self: flex-start;
-  margin-left: 4.7%;
-  margin-bottom: 2%;
-}
-.l-article-single-column-2 h4 {
-  align-self: flex-start;
-  margin-left: 5.1%;
-  margin-top: 0;
-}
-.l-article-single-column-2 p {
+/* ----- Nur #2 ----- */
+.l-article-project2 p {
   margin-bottom: 1%;
 }
 
@@ -289,7 +270,7 @@ nav ul li:hover {
     align-content: center;
   }
   /* ----- PERSONAL DATA ----- */
-  .l-article-columns {
+  .l-article-personaldata {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -301,11 +282,11 @@ nav ul li:hover {
     margin: 12% 4% 24% 0;
     gap: 0em;
   }
-  .l-article-columns > ul {
+  .l-article-personaldata > ul {
     padding: 8%;
     min-width: 20%;
   }
-  .l-article-columns > ul:last-of-type {
+  .l-article-personaldata > ul:last-of-type {
     margin-right: 0;
   }
   #profile_pic, #languages_spoken_pic {
@@ -338,8 +319,8 @@ nav ul li:hover {
   .l-article-boxes img {
     min-width: 13%;
   }
-  /* ----- PROJECT #1 ----- */
-  .l-article-single-column-center {
+  /* ----- PROJECT #1 & #2 ----- */
+  .l-article-project1, .l-article-project2 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -351,38 +332,21 @@ nav ul li:hover {
     margin: 12% 3% 24% auto;
     gap: 1em;
   }
-  .l-article-single-column-center h3 {
+  .l-article-project1 h3, .l-article-project2 h3 {
     margin-left: 0.5%;
   }
-  .l-article-single-column-center h4 {
+  .l-article-project1 h4, .l-article-project2 h4 {
     margin-left: 1%;
   }
-  .l-article-single-column-center a {
+  /* ----- Nur #1 ----- */
+  .l-article-project1 a {
     max-width: 90%;
   }
-  /* ----- PROJECT #2 ----- */
-  .l-article-single-column-2 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(115, 200, 248);
-    padding: 3%;
-    margin: 12% 3% 24% auto;
-    gap: 1em;
-  }
-  .l-article-single-column-2 h3 {
-    margin-left: 0.5%;
-  }
-  .l-article-single-column-2 h4 {
-    margin-left: 1%;
-  }
-  .l-article-single-column-2 .slide-container {
+  /* ----- Nur #2 ----- */
+  .l-article-project2 .slide-container {
     min-width: 100%;
   }
-  div {
+  .l-article-project2 div {
     margin-right: 0;
   }
   /* ----- FORMULAR ----- */
@@ -404,7 +368,7 @@ nav ul li:hover {
 }
 /* ----- Smartphone Querformat ----- */
 @media (max-width: 1024px) and (orientation: landscape) {
-  .l-article-columns, .l-article-single-column-center, .l-article-boxes, .l-article-single-column-2, .l-form-container {
+  .l-article-personaldata, .l-article-project1, .l-article-boxes, .l-article-project2, .l-form-container {
     margin: 5% 10% 10% 10%;
   }
   #profile_pic, #languages_spoken_pic {
@@ -690,7 +654,7 @@ button:hover {
    ANIMATIONEN
    =================================== */
 /* Drehende Räder der Liste */
-.l-article-columns > ul > li::before {
+.l-article-personaldata > ul > li::before {
   content: "\f013"; /* Font Awesome Gear Icon */
   font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;

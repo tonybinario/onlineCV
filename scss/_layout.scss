@@ -37,11 +37,11 @@ nav ul li:hover {
    =================================== */
 
 /* ----- PERSONAL DATA & EDUCATION ----- */
-.l-article-columns {
+.l-article-personaldata {
   @include mixins.container-layout($padding: 2.8em, $gap: 3em);
 }
 
-.l-article-columns > ul {
+.l-article-personaldata > ul {
   flex: 1 0 20%;
   list-style: none;
 
@@ -51,7 +51,7 @@ nav ul li:hover {
   }
 }
 
-.l-article-columns > ul:last-of-type {
+.l-article-personaldata > ul:last-of-type {
   margin-right: 8%;
 }
 
@@ -71,8 +71,8 @@ nav ul li:hover {
   margin: auto;
 }
 
-/* ----- PROJECTS #1 ----- */
-.l-article-single-column-center {
+/* ----- PROJECTS #1 & #2 ----- */
+.l-article-project1, .l-article-project2 {
   @include mixins.container-layout(
           $flex-direction: column,
           $justify-content: center,
@@ -88,8 +88,13 @@ nav ul li:hover {
   h4 {
     align-self: flex-start;
     margin-left: 5.1%;
+    margin-top: 0;
   }
 
+}
+
+/*---- Nur #1 -----*/
+.l-article-project1 {
   video {
     margin-bottom: 1.8%;
   }
@@ -108,25 +113,8 @@ nav ul li:hover {
   }
 }
 
-/* ----- PROJECTS #2 ----- */
-.l-article-single-column-2 {
-  @include mixins.container-layout(
-          $flex-direction: column,
-          $justify-content: center,
-          $align-items: center,
-          $padding: 2%,
-          $gap: 1em
-  );
-
-  h3 {
-    @include mixins.article-heading;
-  }
-
-  h4 {
-    align-self: flex-start;
-    margin-left: 5.1%;
-    margin-top: 0;
-  }
+/* ----- Nur #2 ----- */
+.l-article-project2 {
 
   p {
     margin-bottom: 1%;
@@ -206,16 +194,16 @@ nav ul li:hover {
   }
 
   /* ----- PERSONAL DATA ----- */
-  .l-article-columns {
+  .l-article-personaldata {
     @include mixins.container-layout($margin: 12% 4% 24% 0, $padding: 1%, $gap: 0em);
   }
 
-  .l-article-columns > ul {
+  .l-article-personaldata > ul {
     padding: 8%;
     min-width: 20%;
   }
 
-  .l-article-columns > ul:last-of-type {
+  .l-article-personaldata > ul:last-of-type {
     margin-right: 0;
   }
 
@@ -246,8 +234,9 @@ nav ul li:hover {
     }
   }
 
-  /* ----- PROJECT #1 ----- */
-  .l-article-single-column-center {
+
+  /* ----- PROJECT #1 & #2 ----- */
+  .l-article-project1, .l-article-project2 {
     @include mixins.container-layout(
             $flex-direction: column,
             $justify-content: center,
@@ -263,37 +252,26 @@ nav ul li:hover {
     h4 {
       margin-left: 1%;
     }
+  }
 
+  /* ----- Nur #1 ----- */
+
+  .l-article-project1 {
     a {
       max-width: 90%;
     }
   }
 
-  /* ----- PROJECT #2 ----- */
-  .l-article-single-column-2 {
-    @include mixins.container-layout(
-            $flex-direction: column,
-            $justify-content: center,
-            $align-items: center,
-            $margin: 12% 3% 24% auto,
-            $gap: 1em
-    );
-
-    h3 {
-      margin-left: 0.5%;
-    }
-
-    h4 {
-      margin-left: 1%;
-    }
+  /* ----- Nur #2 ----- */
+  .l-article-project2 {
 
     .slide-container {
       min-width: 100%;
     }
-  }
 
-  div {
-    margin-right: 0;
+    div {
+      margin-right: 0;
+    }
   }
 
   /* ----- FORMULAR ----- */
@@ -306,6 +284,7 @@ nav ul li:hover {
             $gap: 1em
     );
   }
+
   #form-info {
     font-size: 0.5em;
   }
@@ -315,7 +294,7 @@ nav ul li:hover {
 
 @media (max-width: 1024px) and (orientation: landscape) {
 
-  .l-article-columns, .l-article-single-column-center, .l-article-boxes, .l-article-single-column-2, .l-form-container {
+  .l-article-personaldata, .l-article-project1, .l-article-boxes, .l-article-project2, .l-form-container {
     margin: 5% 10% 10% 10%;
   }
 
