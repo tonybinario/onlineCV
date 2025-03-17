@@ -402,6 +402,12 @@ nav ul li:hover {
     font-size: 0.5em;
   }
 }
+/* ----- Smartphone Querformat ----- */
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-color: purple;
+  }
+}
 /* ===================================
    BASE STYLES – Globale HTML-Elemente
    =================================== */
