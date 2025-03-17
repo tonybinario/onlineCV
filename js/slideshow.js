@@ -1,3 +1,4 @@
+//Slideshow Bilder
 let slideIndex = 1;
 showDivs(slideIndex);
 
@@ -55,7 +56,3 @@ function closeFullscreen() {
 // Klick-Event für den Vollbildmodus aktivieren (Vollbild-Symbol)
 fullscreenBtn.addEventListener('click', openFullscreen);
 
-// Wenn du den Vollbildmodus manuell für das Bild anpassen möchtest, entferne die vorherige Codezeile und setze keine EventListener auf die Bilder selbst
-// images.forEach(image => {
-//     image.addEventListener('click', openFullscreen);
-// });

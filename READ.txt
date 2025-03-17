@@ -1,7 +1,16 @@
-Konzept überdenken:
-em rem schrift vw vh viewport
--variablen hinzufügen
+------THE WAY TO GO-------------------------------
+
+Notation: SMACSS Notation
+
+Wieso?
+
+-state weggelassen?
+
+base.scss definier die basis stlyes der html tags
+
+layout.scss definiert  wo in der Webpage das Objekt plaziert wird und wie es sich in bestimmte situationen verhält
+
+Modules.scss definiert, wie wiederverwendbare UI-Elemente (z. B. Buttons, Karten oder Widgets) gestylt werden.
 
 
-verstehe ich alles was ich geschrieben habe?
-zettel vorbereiten in dem ich auf alle bewertungspunkte eingehe
+alles relativ zum Bildschirm gestalten

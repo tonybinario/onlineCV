@@ -240,19 +240,21 @@ nav ul li:hover {
    =================================== */
 #languages_spoken_pic {
   position: absolute;
-  width: 8.5rem; /* 135px / 16px = 8.4375rem */
-  height: 1.3rem; /* 21px / 16px = 1.3125rem */
-  top: 21rem; /* 285px / 16px = 17.8125rem */
-  left: 7.7rem; /* 123px / 16px = 7.6875rem */
+  max-width: 8.5rem;
+  height: 1.3rem;
+  top: 75%;
+  left: 9%;
 }
 
 #profile_pic {
+  position: relative;
   flex: 1 0 20em;
   border: solid 7px black;
-  max-width: 14%;
-  margin-top: 8%;
-  margin-left: 8%;
-  margin-right: 7%;
+  bottom: 10%;
+  left: 5%;
+  max-width: 9.5em;
+  margin-right: 10%;
+  margin-top: 7%;
 }
 
 /* ===================================
@@ -373,6 +375,9 @@ nav ul li:hover {
   }
   #profile_pic, #languages_spoken_pic {
     display: none;
+  }
+  #hidden-languages-info {
+    display: flex;
   }
   .l-article-boxes {
     gap: 4em;
@@ -576,10 +581,7 @@ button:hover {
    =================================== */
 /* Vollbildmodus für die Slideshow */
 .fullscreen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
