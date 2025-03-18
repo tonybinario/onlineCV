@@ -28,6 +28,7 @@
   }
 }
 
+/* Animation */
 nav ul li:hover {
   transform: scale(1.1); /* Skaliert den Listeneintrag leicht */
 }
@@ -36,23 +37,43 @@ nav ul li:hover {
    ARTICLES
    =================================== */
 
+
 /* ----- PERSONAL DATA & EDUCATION ----- */
 .l-article-personaldata {
-  @include mixins.container-layout($padding: 2.8em, $gap: 3em);
+  @include mixins.container-layout($padding: 2.8em, $gap: 3.8em);
 }
 
 .l-article-personaldata > ul {
-  flex: 1 0 20%;
+  flex: 1 0 10em;
   list-style: none;
 
   li {
     position: relative;
-    padding-left: 30px;
+    padding-left: 13%;
   }
 }
 
 .l-article-personaldata > ul:last-of-type {
-  margin-right: 8%;
+  margin-right: 7%;
+}
+
+#profile_pic {
+  position: relative;
+  flex: 1 0 20em;
+  border: solid 7px black;
+  bottom: 10%;
+  left: 5%;
+  max-width: 9.5em;
+  margin-right: 10%;
+  margin-top: 7%;
+}
+
+#languages_spoken_pic {
+  position: absolute;
+  max-width: 8.5rem;
+  height: 1.3rem;
+  top: 75%;
+  left: 9.2%;
 }
 
 /* ----- SKILL SET ----- */
@@ -90,9 +111,6 @@ nav ul li:hover {
 
 /*---- Nur #1 -----*/
 .l-article-project1 {
-  video {
-    margin-bottom: 1.8%;
-  }
 
   div {
     display: flex;
@@ -134,43 +152,22 @@ nav ul li:hover {
 .l-form-container {
   @include mixins.container-layout($gap: 2em);
 
-  .form-label {
-    margin-bottom: 1%;
-  }
-
   .form-field {
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    margin-bottom: 1em; /* Abstand zwischen den Form-Feldern */
+
+    label {
+      display: block;
+      margin-bottom: 0.5em; /* Abstand zwischen Label und Eingabefeld */
+    }
 
     > p {
       margin-top: 0.5%;
       color: indigo;
       font-size: 0.7em;
     }
+
   }
-}
-
-/* ===================================
-   BILDER
-   =================================== */
-#languages_spoken_pic {
-  position: absolute;
-  max-width: 8.5rem;
-  height: 1.3rem;
-  top: 75%;
-  left: 9%;
-}
-
-#profile_pic {
-  position: relative;
-  flex: 1 0 20em;
-  border: solid 7px black;
-  bottom: 10%;
-  left: 5%;
-  max-width: 9.5em;
-  margin-right: 10%;
-  margin-top: 7%;
 }
 
 /* ===================================
@@ -180,12 +177,12 @@ nav ul li:hover {
 /* ----- NAVIGATION ----- */
 @media screen and (max-width: 600px) {
   .l-nav-ul {
-    margin: 7% 6% 24% auto;
-    width: 90%; /* Breite begrenzen */
+    margin: 7% 6% 24% 6%;
+    width: 90%;
     gap: 25px;
 
     li {
-      height: 40px;
+      height: 3em;
       align-content: center;
     }
   }
@@ -207,7 +204,7 @@ nav ul li:hover {
 
   /* ----- SKILLSET ----- */
   .l-article-boxes {
-    @include mixins.container-layout($margin: 12% 3% 24% auto, $padding: 7%, $gap: 2.5em);
+    @include mixins.container-layout($margin: 12% 3% 24% 3%, $padding: 7%, $gap: 2.5em);
 
     img {
       min-width: 13%;
@@ -219,9 +216,7 @@ nav ul li:hover {
   .l-article-project1, .l-article-project2 {
     @include mixins.container-layout(
             $flex-direction: column,
-            $justify-content: center,
-            $align-items: center,
-            $margin: 12% 3% 24% auto,
+            $margin: 12% 3% 24% 3%,
             $gap: 1em
     );
 
@@ -256,15 +251,8 @@ nav ul li:hover {
 
   /* ----- FORMULAR ----- */
   .l-form-container {
-    @include mixins.container-layout(
-            $flex-direction: column,
-            $justify-content: center,
-            $align-items: center,
-            $margin: 12% 3% 24% auto,
-            $gap: 1em
-    );
+    margin: 12% 3% 24% 3%;
   }
-
   #form-info {
     font-size: 0.5em;
   }
@@ -274,22 +262,17 @@ nav ul li:hover {
 
 @media (max-width: 1024px) and (orientation: landscape) {
 
+
   .l-article-personaldata, .l-article-project1, .l-article-boxes, .l-article-project2, .l-form-container {
     margin: 5% 9% 10% 9%;
   }
 
-  .l-article-personaldata{
-
-    gap:1.5em;
+  .l-article-personaldata {
+    gap: 1.5em;
   }
 
   .l-article-boxes {
-    gap: 4em;
+    gap: 3em;
 
-    > img {
-      flex: 1 0 auto;
-      max-width: 12%;
-      margin: auto;
-    }
   }
 }

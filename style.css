@@ -91,6 +91,7 @@ table td {
   display: block; /* Die ganze Fläche zählt als Link */
 }
 
+/* Animation */
 nav ul li:hover {
   transform: scale(1.1); /* Skaliert den Listeneintrag leicht */
 }
@@ -109,20 +110,39 @@ nav ul li:hover {
   background-color: rgb(115, 200, 248);
   padding: 2.8em;
   margin: 5% 15% 10% 15%;
-  gap: 3em;
+  gap: 3.8em;
 }
 
 .l-article-personaldata > ul {
-  flex: 1 0 20%;
+  flex: 1 0 10em;
   list-style: none;
 }
 .l-article-personaldata > ul li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 13%;
 }
 
 .l-article-personaldata > ul:last-of-type {
-  margin-right: 8%;
+  margin-right: 7%;
+}
+
+#profile_pic {
+  position: relative;
+  flex: 1 0 20em;
+  border: solid 7px black;
+  bottom: 10%;
+  left: 5%;
+  max-width: 9.5em;
+  margin-right: 10%;
+  margin-top: 7%;
+}
+
+#languages_spoken_pic {
+  position: absolute;
+  max-width: 8.5rem;
+  height: 1.3rem;
+  top: 75%;
+  left: 9.2%;
 }
 
 /* ----- SKILL SET ----- */
@@ -170,9 +190,6 @@ nav ul li:hover {
 }
 
 /*---- Nur #1 -----*/
-.l-article-project1 video {
-  margin-bottom: 1.8%;
-}
 .l-article-project1 div {
   display: flex;
   align-items: center;
@@ -216,13 +233,13 @@ nav ul li:hover {
   margin: 5% 15% 10% 15%;
   gap: 2em;
 }
-.l-form-container .form-label {
-  margin-bottom: 1%;
-}
 .l-form-container .form-field {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  margin-bottom: 1em; /* Abstand zwischen den Form-Feldern */
+}
+.l-form-container .form-field label {
+  display: block;
+  margin-bottom: 0.5em; /* Abstand zwischen Label und Eingabefeld */
 }
 .l-form-container .form-field > p {
   margin-top: 0.5%;
@@ -231,39 +248,17 @@ nav ul li:hover {
 }
 
 /* ===================================
-   BILDER
-   =================================== */
-#languages_spoken_pic {
-  position: absolute;
-  max-width: 8.5rem;
-  height: 1.3rem;
-  top: 75%;
-  left: 9%;
-}
-
-#profile_pic {
-  position: relative;
-  flex: 1 0 20em;
-  border: solid 7px black;
-  bottom: 10%;
-  left: 5%;
-  max-width: 9.5em;
-  margin-right: 10%;
-  margin-top: 7%;
-}
-
-/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 /* ----- NAVIGATION ----- */
 @media screen and (max-width: 600px) {
   .l-nav-ul {
-    margin: 7% 6% 24% auto;
-    width: 90%; /* Breite begrenzen */
+    margin: 7% 6% 24% 6%;
+    width: 90%;
     gap: 25px;
   }
   .l-nav-ul li {
-    height: 40px;
+    height: 3em;
     align-content: center;
   }
   /* ----- PERSONAL DATA ----- */
@@ -296,7 +291,7 @@ nav ul li:hover {
     align-items: flex-start;
     background-color: rgb(115, 200, 248);
     padding: 7%;
-    margin: 12% 3% 24% auto;
+    margin: 12% 3% 24% 3%;
     gap: 2.5em;
   }
   .l-article-boxes img {
@@ -308,11 +303,11 @@ nav ul li:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: rgb(115, 200, 248);
     padding: 3%;
-    margin: 12% 3% 24% auto;
+    margin: 12% 3% 24% 3%;
     gap: 1em;
   }
   .l-article-project1 h3, .l-article-project2 h3 {
@@ -334,16 +329,7 @@ nav ul li:hover {
   }
   /* ----- FORMULAR ----- */
   .l-form-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(115, 200, 248);
-    padding: 3%;
-    margin: 12% 3% 24% auto;
-    gap: 1em;
+    margin: 12% 3% 24% 3%;
   }
   #form-info {
     font-size: 0.5em;
@@ -358,12 +344,7 @@ nav ul li:hover {
     gap: 1.5em;
   }
   .l-article-boxes {
-    gap: 4em;
-  }
-  .l-article-boxes > img {
-    flex: 1 0 auto;
-    max-width: 12%;
-    margin: auto;
+    gap: 3em;
   }
 }
 /* ===================================
@@ -515,21 +496,30 @@ button:hover {
   }
 }
 /* ===================================
-   SLIDE SHOW
+   ANIMATIONEN
    =================================== */
-/* Container für die Slideshow */
-.slide-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 3.5%;
-  width: 90%;
+/* Drehende Räder der Liste */
+.l-article-personaldata > ul > li::before {
+  content: "\f013"; /* Font Awesome Gear Icon */
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(-50%);
+  animation: spin 2s linear infinite;
 }
 
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+  }
+}
 /* ===================================
-   BUTTON STYLING
+   SLIDE SHOW
    =================================== */
 /* Styling für die Buttons */
 .prev, .next {
@@ -545,7 +535,7 @@ button:hover {
   transform: translateY(-50%);
 }
 
-/* Positionierung der Buttons */
+/* Horizontale Positionierung der Buttons */
 .prev {
   left: 10px;
 }
@@ -554,18 +544,28 @@ button:hover {
   right: 10px;
 }
 
+/* Container für die Slideshow */
+.slide-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3.5%;
+  width: 90%;
+}
+
 /* ===================================
    FULLSCREEN MODUS
    =================================== */
 /* Vollbildmodus für die Slideshow */
 .fullscreen {
-  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95); /* Dunkler Hintergrund */
   z-index: 1000;
   padding: 0;
 }
@@ -597,6 +597,18 @@ button:hover {
   color: black;
 }
 
+/* Vor/Zurück-Buttons im Vollbildmodus */
+.fullscreen .prev, .fullscreen .next {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 15px;
+}
+
+.fullscreen .prev:hover, .fullscreen .next:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /* Button zum Schließen des Vollbildmodus */
 .close-fullscreen {
   position: absolute;
@@ -615,44 +627,6 @@ button:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* ===================================
-   FULLSCREEN NAVIGATION BUTTONS
-   =================================== */
-/* Vor/Zurück-Buttons im Vollbildmodus */
-.fullscreen .prev, .fullscreen .next {
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 10px 15px;
-}
-
-.fullscreen .prev:hover, .fullscreen .next:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* ===================================
-   ANIMATIONEN
-   =================================== */
-/* Drehende Räder der Liste */
-.l-article-personaldata > ul > li::before {
-  content: "\f013"; /* Font Awesome Gear Icon */
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  transform: translateY(-50%);
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
-  }
-}
 /* Standardmäßig verstecken wir die Sprachinformationen */
 #hidden-languages-info {
   display: none;

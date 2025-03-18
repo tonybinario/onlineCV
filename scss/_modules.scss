@@ -2,22 +2,32 @@
 @import "colors";
 
 /* ===================================
-   SLIDE SHOW
+   ANIMATIONEN
    =================================== */
 
-/* Container für die Slideshow */
-.slide-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba($primary-text-color,0.9);
-  padding: 3.5%;
-  width: 90%;
+/* Drehende Räder der Liste */
+.l-article-personaldata > ul > li::before {
+  content: "\f013"; /* Font Awesome Gear Icon */
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(-50%);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+  }
 }
 
 /* ===================================
-   BUTTON STYLING
+   SLIDE SHOW
    =================================== */
 
 /* Styling für die Buttons */
@@ -32,10 +42,9 @@
   cursor: pointer;
   transition: 0.3s;
   transform: translateY(-50%);
-
 }
 
-/* Positionierung der Buttons */
+/* Horizontale Positionierung der Buttons */
 .prev {
   left: 10px;
 }
@@ -44,19 +53,30 @@
   right: 10px;
 }
 
+/* Container für die Slideshow */
+.slide-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba($primary-text-color,0.9);
+  padding: 3.5%;
+  width: 90%;
+}
+
+
 /* ===================================
    FULLSCREEN MODUS
    =================================== */
 
 /* Vollbildmodus für die Slideshow */
 .fullscreen {
-  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba($primary-text-color, 0.95); /* Dunkler Hintergrund */
   z-index: 1000;
   padding: 0;
 }
@@ -88,6 +108,18 @@
   color: $primary-text-color;
 }
 
+/* Vor/Zurück-Buttons im Vollbildmodus */
+.fullscreen .prev, .fullscreen .next {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 15px;
+}
+
+.fullscreen .prev:hover, .fullscreen .next:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /* Button zum Schließen des Vollbildmodus */
 .close-fullscreen {
   position: absolute;
@@ -106,43 +138,5 @@
   background: rgba($primary-text-color, 0.7);
 }
 
-/* ===================================
-   FULLSCREEN NAVIGATION BUTTONS
-   =================================== */
 
-/* Vor/Zurück-Buttons im Vollbildmodus */
-.fullscreen .prev, .fullscreen .next {
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 10px 15px;
-}
 
-.fullscreen .prev:hover, .fullscreen .next:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* ===================================
-   ANIMATIONEN
-   =================================== */
-
-/* Drehende Räder der Liste */
-.l-article-personaldata > ul > li::before {
-  content: "\f013"; /* Font Awesome Gear Icon */
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  transform: translateY(-50%);
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
-  }
-}

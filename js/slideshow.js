@@ -1,13 +1,13 @@
 //Slideshow Bilder
 
 let slideIndex = 1;
-showDivs(slideIndex);
+showImages(slideIndex);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+function plusImg(n) {
+    showImages(slideIndex += n);
 }
 
-function showDivs(n) {
+function showImages(n) {
     let i;
     let x = document.getElementsByClassName("mySlides");
     if (n > x.length) { slideIndex = 1 }

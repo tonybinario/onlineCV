@@ -1,16 +1,108 @@
 ------THE WAY TO GO-------------------------------
 
-Notation: SMACSS Notation
+1. Notation: SMACSS Notation
 
 Wieso?
 
--state weggelassen?
+ - nicht so strenge namensgebungen, relativ klare aufteilung der stylesheets in wenige categorien.  Lässt freiraum
 
-base.scss definier die basis stlyes der html tags
+  ITCSS (Inverted Triangle CSS) wäre auch ok gewesen aber noch mehr kategorien
 
-layout.scss definiert  wo in der Webpage das Objekt plaziert wird und wie es sich in bestimmte situationen verhält
+base.scss definiert die basis Styles der html tags. Es muss auf alle tags der sorte zutreffen
+
+layout.scss definiert alles styles die bestimmten  wo in der Webpage das Objekt plaziert wird und wie es sich in bestimmte situationen verhält
 
 Modules.scss definiert, wie wiederverwendbare UI-Elemente (z. B. Buttons, Karten oder Widgets) gestylt werden.
 
+Sates.scss regelt das Aussehen und Verhalten von Elementen, wenn sie sich in einem bestimmten Zustand befinden
 
-alles relativ zum Bildschirm gestalten
+themes.scss habe ich nicht weil ich nicht mit themes arbeite
+
+2. NAV
+
+Anordnung: columns , wrap & animation beim hovern.
+Smartphone ansicht > weniger margin mehr gap für klarheit
+ul,ol font size > base.scss
+
+3. PERSONAL DATA & EDUCATION
+
+Mixin erklären (default werte und mögliche parameter)
+
+>Anordnung: row + wrap flex: 1 0 20%; mehrere spalten mit rows
+profilbild relativ zum container,
+zusammenspiel von margins usw erklären
+
+#languages spoken absolut, weil sonst nicht in der lage die position mit realiven werten zu bestimmen. (liegt im bereich des flexitems des profilbilds)
+
+> Modules für die animation der Räder
+Räder eingebunden durch font awesome schrift art. Icon ist sozusagen ein buchstabe der schriftart
+auf animation eingehen
+
+> Smartphone ansicht
+
+Wenn smartphone ansicht, dann bilder display none und languages info display : block.
+Weil weniger platz ... siehe states
+
+Viel weniger margin links rechts weniger gap, größere ul breite .. siehe responsive teil
+
+> quer ansicht
+
+Wenn queransicht bilder auch weg siehe state und Änderungen der flexeigenschaften siehe responsive teil im layout.
+
+4.SKILLSET
+
+Mixin fast unberührt. mehr gap
+img max width, kein shrink und auto tatsächlich durch ausprobieren.
+
+> Smartphone ansicht
+
+anderer margin, padding, und gap + img min-width angepasst
+
+>Queransicht
+
+margin weniger 9% statt 15% (NORMAL) oder statt 3% (handy)
+
+5.PROJECT 1
+
+Mixin flexdirection column
+siehe code
+
+iframe > base.scss
+
+p > base.scss
+
+div damit beide elemente in einer reihe sind (link + p (project 1))
+
+> Smartphone ansicht
+
+margin nur 3%
+h3 h4 angepasst auf weniger
+
+> smartphone queransicht
+
+margin anpassung
+
+
+6.PROJECT 2
+
+Verhält sich ähnlich
+bis auf die slideshow und den tools container:
+
+index die stelle zeigen und dann zum javascript teil übergehen, erklären.
+--> zu modules gehen slidercontainer zeigen.
+buttons zeigen
+buttons on hover --> base.scss da alle buttons betrifft
+
+eingehen auf classlist.add (fullscreen + fullscreen img + fullscreen prev...) und addclosebutton führt zu closeFullscreen
+der open button ist schon gegeben der closebutton wird on the fly erstellt.
+
+>smartphoneansicht
+
+7.Formular
+
+index erklären post request an den server mit kennung ...
+layout einzelheiten in layout..
+
+
+
+
