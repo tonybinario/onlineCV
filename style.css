@@ -125,11 +125,6 @@ nav ul li:hover {
   margin-right: 8%;
 }
 
-/* Ul-spezialfall */
-#hidden-languages-info {
-  display: none;
-}
-
 /* ----- SKILL SET ----- */
 .l-article-boxes {
   position: relative;
@@ -291,20 +286,6 @@ nav ul li:hover {
   .l-article-personaldata > ul:last-of-type {
     margin-right: 0;
   }
-  #profile_pic, #languages_spoken_pic {
-    display: none;
-  }
-  #languages_spoken_pic {
-    position: absolute;
-    width: 145px;
-    height: 21px;
-    top: 1040px;
-    left: 108px;
-  }
-  /* statt dem Sprachen-Symbolen */
-  #hidden-languages-info {
-    display: block;
-  }
   /* ----- SKILLSET ----- */
   .l-article-boxes {
     position: relative;
@@ -371,13 +352,10 @@ nav ul li:hover {
 /* ----- Smartphone Querformat ----- */
 @media (max-width: 1024px) and (orientation: landscape) {
   .l-article-personaldata, .l-article-project1, .l-article-boxes, .l-article-project2, .l-form-container {
-    margin: 5% 10% 10% 10%;
+    margin: 5% 9% 10% 9%;
   }
-  #profile_pic, #languages_spoken_pic {
-    display: none;
-  }
-  #hidden-languages-info {
-    display: flex;
+  .l-article-personaldata {
+    gap: 1.5em;
   }
   .l-article-boxes {
     gap: 4em;
@@ -663,7 +641,7 @@ button:hover {
   position: absolute;
   left: 0;
   bottom: 50%;
-  transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%);
   animation: spin 2s linear infinite;
 }
 
@@ -673,6 +651,39 @@ button:hover {
   }
   100% {
     transform: translateY(-50%) rotate(360deg); /* Drehung über 360 Grad */
+  }
+}
+/* Standardmäßig verstecken wir die Sprachinformationen */
+#hidden-languages-info {
+  display: none;
+}
+
+/* ===================================
+   MEDIA QUERIES:
+   =================================== */
+/* Falls der Bildschirm kleiner als 600px ist (Smartphones),
+   werden die Profil- und Sprachbilder ausgeblendet */
+@media screen and (max-width: 600px) {
+  #profile_pic,
+  #languages_spoken_pic {
+    display: none;
+  }
+  /* Stattdessen zeigen wir die Sprachinformationen als Text an */
+  #hidden-languages-info {
+    display: block;
+  }
+}
+/* Falls die Bildschirmbreite kleiner als 1024px ist
+   und das Gerät sich im Querformat befindet,
+   werden ebenfalls die Bilder ausgeblendet */
+@media (max-width: 1024px) and (orientation: landscape) {
+  #profile_pic,
+  #languages_spoken_pic {
+    display: none;
+  }
+  /* Hier wird die Sprachinfo als flexibles Element dargestellt */
+  #hidden-languages-info {
+    display: block;
   }
 }
 

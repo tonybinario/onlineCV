@@ -55,11 +55,6 @@ nav ul li:hover {
   margin-right: 8%;
 }
 
-/* Ul-spezialfall */
-#hidden-languages-info {
-  display: none
-}
-
 /* ----- SKILL SET ----- */
 .l-article-boxes {
   @include mixins.container-layout($gap: 6em);
@@ -176,8 +171,6 @@ nav ul li:hover {
   max-width: 9.5em;
   margin-right: 10%;
   margin-top: 7%;
-
-
 }
 
 /* ===================================
@@ -209,23 +202,6 @@ nav ul li:hover {
 
   .l-article-personaldata > ul:last-of-type {
     margin-right: 0;
-  }
-
-  #profile_pic, #languages_spoken_pic {
-    display: none;
-  }
-
-  #languages_spoken_pic {
-    position: absolute;
-    width: 145px;
-    height: 21px;
-    top: 1040px;
-    left: 108px;
-  }
-
-  /* statt dem Sprachen-Symbolen */
-  #hidden-languages-info {
-    display: block;
   }
 
 
@@ -299,15 +275,12 @@ nav ul li:hover {
 @media (max-width: 1024px) and (orientation: landscape) {
 
   .l-article-personaldata, .l-article-project1, .l-article-boxes, .l-article-project2, .l-form-container {
-    margin: 5% 10% 10% 10%;
+    margin: 5% 9% 10% 9%;
   }
 
-  #profile_pic, #languages_spoken_pic {
-    display: none;
-  }
+  .l-article-personaldata{
 
-  #hidden-languages-info{
-    display: flex;
+    gap:1.5em;
   }
 
   .l-article-boxes {

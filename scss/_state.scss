@@ -1,0 +1,38 @@
+
+/* Standardmäßig verstecken wir die Sprachinformationen */
+#hidden-languages-info {
+  display: none;
+}
+
+/* ===================================
+   MEDIA QUERIES:
+   =================================== */
+
+/* Falls der Bildschirm kleiner als 600px ist (Smartphones),
+   werden die Profil- und Sprachbilder ausgeblendet */
+@media screen and (max-width: 600px) {
+  #profile_pic,
+  #languages_spoken_pic {
+    display: none;
+  }
+
+  /* Stattdessen zeigen wir die Sprachinformationen als Text an */
+  #hidden-languages-info {
+    display: block;
+  }
+}
+
+/* Falls die Bildschirmbreite kleiner als 1024px ist
+   und das Gerät sich im Querformat befindet,
+   werden ebenfalls die Bilder ausgeblendet */
+@media (max-width: 1024px) and (orientation: landscape) {
+  #profile_pic,
+  #languages_spoken_pic {
+    display: none;
+  }
+
+  /* Hier wird die Sprachinfo als flexibles Element dargestellt */
+  #hidden-languages-info {
+    display: block;
+  }
+}
